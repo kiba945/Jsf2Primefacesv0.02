@@ -95,10 +95,18 @@ public class UserManagedBean implements Serializable
         System.out.println("Notre liste contient: "+searchUsersResults.size());
         return "home";
     }
+ 
+    public String deleteUser()
+    {
+        System.out.println("Delete : "+this.selectedUser);
+//        this.userService.delete(this.selectedUser);
+        return "home";
+    }    
     
     public String updateUser()
     {
-        userService.update(this.selectedUser);
+//        userService.update(this.selectedUser);
+        System.out.println("Update: "+this.selectedUser);
         return "home";
     }
     
